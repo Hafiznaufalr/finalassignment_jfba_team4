@@ -4,6 +4,7 @@ public interface MenuCallback {
     void backToMainMenu();
     void callAddCar();
     void callAvailabilityCar();
-    void callRentalNote();
+    void callInputRental();
+    void callShowRental();
 
 }

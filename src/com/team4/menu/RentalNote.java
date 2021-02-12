@@ -105,7 +105,7 @@ public class RentalNote {
 
         System.out.print("Ingin input data lagi? (y/n): ");
         if (input.next().equals("y")) {
-            main.callRentalNote();
+            main.callInputRental();
         } else {
             main.backToMainMenu();
         }
@@ -138,7 +138,7 @@ public class RentalNote {
 
         System.out.print("Ingin lihat data lagi? (y/n): ");
         if (input.next().equals("y")) {
-            main.callRentalNote();
+            main.callShowRental();
         } else {
             main.backToMainMenu();
         }

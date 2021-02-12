@@ -41,7 +41,7 @@ public class Main implements MenuCallback {
                 AvailabilityCar.showCars(cars);
                 break;
             case "3":
-                getRentalMenu();
+                getRentalMenu("0");
             case "4":
                 System.exit(0);
                 break;
@@ -50,13 +50,19 @@ public class Main implements MenuCallback {
         }
     }
 
-    private static void getRentalMenu() {
-        Scanner input = new Scanner(System.in);
+    private static void getRentalMenu(String param) {
+        String menu = "0";
 
-        System.out.println("1. Tambah Pesanan Rental");
-        System.out.println("2. Lihat Pesanan Rental");
-        System.out.print("Pilih menu: ");
-        String menu = input.next();
+        if (param.equals("0")) {
+            Scanner input = new Scanner(System.in);
+
+            System.out.println("1. Tambah Pesanan Rental");
+            System.out.println("2. Lihat Pesanan Rental");
+            System.out.print("Pilih menu: ");
+            menu = input.next();
+        } else if (param.equals("1")) {
+            menu = "1";
+        } else menu = "2";
 
         switch (menu) {
             case "1":
@@ -86,7 +92,12 @@ public class Main implements MenuCallback {
     }
 
     @Override
-    public void callRentalNote() {
-        selectedMenu("3");
+    public void callInputRental() {
+        getRentalMenu("1");
+    }
+
+    @Override
+    public void callShowRental() {
+        getRentalMenu("2");
     }
 }
